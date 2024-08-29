@@ -1,0 +1,38 @@
+@startuml
+class cafedj{
+-nama
+-lokasi
++addstaff
++removestaff
++regiscust
++unregiscust
+}
+
+class staff{
+-nama
+-Idstaff
++add product
++remove product
+}
+
+class customer{
+-nama
+-idcust
++purechase_customer
++email
++alamat
+}
+
+class product{
+-nama
+-price
+-stock
+}
+
+cafedj<-->staff:<<manajemen>>
+cafedj-->customer:<<registrasi>>
+customer-->product:<<buy>>
+staff-->product:<<sells>>
+
+
+@enduml
